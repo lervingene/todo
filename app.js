@@ -19,19 +19,23 @@ function addTodo(event) {
     //add li ?-why do I need to wrap this with div?
     const todoLi = document.createElement("li");
     todoLi.classList.add("todoLi");
-    todoLi.innerText = "hey";
+    todoLi.innerText = todoInput.value;
 
     todoDiv.appendChild(todoLi);
 
     //add a check button
     const checkBtn = document.createElement("button");
     checkBtn.innerHTML = "<i class='fas fa-check'></i>";
+    checkBtn.classList.add("checkBtn");
     todoDiv.appendChild(checkBtn);
     
     //add a delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
+    deleteBtn.classList.add("deleteBtn");
     todoDiv.appendChild(deleteBtn);
 
     todoList.appendChild(todoDiv);
+
+    todoInput.value = "";
 }

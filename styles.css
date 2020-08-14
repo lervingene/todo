@@ -46,13 +46,57 @@ form button {
 }
 
 form button:hover {
-    background-color: #fab776;
+    background-color: transparent;
     color: white;
 }
 
 
 /* todo-list */
 
-.todoDiv {
+.todo-list {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todoDiv {
+    width: 30rem;
+    background: white;
+    display: flex;
+    /* padding: 1rem; */
+    margin-bottom: 0.2rem;
+}
+
+.todoLi {
+    flex-grow: 1;
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.checkBtn, .deleteBtn {
+    background-color: white;
+    /* height: 100%; */
+    width: 3rem;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.checkBtn {
+    background-color: yellowgreen;
+}
+
+.deleteBtn {
+    background-color: red;
+}
+
+.checkBtn:hover {
+    background-color: transparent;
+    color: yellowgreen;
+}
+
+.deleteBtn:hover {
+    background-color: transparent;
+    color: red;
 }
