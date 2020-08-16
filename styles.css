@@ -42,12 +42,44 @@ form input{
 }
 
 form button {
-    color: #fab776;
+    color: #ff8800;
 }
 
 form button:hover {
-    background-color: transparent;
+    background-color: #ff8800;
     color: white;
+}
+
+/*filter*/
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    color: #fab776;
+    width: 13rem;
+}
+
+.select {
+    position: relative;
+}
+
+.select::after {
+    content: "\25BC";
+    color: white;
+    background-color: #ff8800;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+    pointer-events: none;
 }
 
 
@@ -60,17 +92,21 @@ form button:hover {
 }
 
 .todoDiv {
+    height: 3rem;
     width: 30rem;
     background: white;
     display: flex;
     /* padding: 1rem; */
     margin-bottom: 0.2rem;
+    transition: all 0.5s ease;
 }
 
 .todoLi {
+    font-size: 1.5rem;
     flex-grow: 1;
-    padding: 1rem;
+    padding: 0.5rem;
     list-style-type: none;
+    align-self: center;
 }
 
 .checkBtn, .deleteBtn {
@@ -100,3 +136,25 @@ form button:hover {
     background-color: transparent;
     color: red;
 }
+
+.checkBtn i, .deleteBtn i {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide-out {
+    transform: translateX(15rem) rotateX(90deg);
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none;
+    position: absolute;
+    transition: none;
+}
+
+

@@ -8,7 +8,7 @@
             "name": "chrome todo",
             "type": "chrome",
             "request": "launch",
-            "file": "${workspaceFolder}/index.html"
+            "file": "${workspaceFolder}/index.html",
             "timeout": 20000
         },
         {
